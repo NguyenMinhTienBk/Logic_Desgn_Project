@@ -1,0 +1,10 @@
+../Core/Src/led_display.c:4:6:display7SEG	16	static
+../Core/Src/led_display.c:112:6:update7SEG	16	static
+../Core/Src/led_display.c:135:6:updateLedBuffer	16	static
+../Core/Src/led_display.c:143:6:SetLed7Seg1On	8	static
+../Core/Src/led_display.c:149:6:SetLed7Seg2On	8	static
+../Core/Src/led_display.c:155:6:SetLed7Seg3On	8	static
+../Core/Src/led_display.c:161:6:SetLed7Seg4On	8	static
+../Core/Src/led_display.c:167:6:SetLed7SegAllOn	8	static
+../Core/Src/led_display.c:174:6:SetLed7SegAllOff	8	static
+../Core/Src/led_display.c:181:6:Led_scaning	8	static
