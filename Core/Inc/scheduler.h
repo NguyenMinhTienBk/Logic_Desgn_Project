@@ -56,7 +56,7 @@ typedef struct{
 }sTasks;
 
 #define SCH_MAX_TASKS 40
-#define TICK 			10
+#define TICK 			1
 
 void SCH_Init(void);
 

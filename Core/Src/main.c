@@ -24,7 +24,6 @@
 /* USER CODE BEGIN Includes */
 #include "button.h"
 #include <fsm_mode.h>
-#include <fsm_mode_Led7Seg.h>
 #include <software_timer.h>
 #include "led_display.h"
 #include <stdint.h>
@@ -70,22 +69,11 @@ static void MX_TIM3_Init(void);
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
 
-int _write(int file, char *ptr, int len){
-	HAL_UART_Transmit(&huart2, (uint8_t*)ptr, len, HAL_MAX_DELAY);
-	return len;
-}
-
 int dutycycle;
 void Buzzer_On(){
-//		if (timer6_flag == 1){
-//			dutycycle += 1000 / ((5)*5);
-//			if (dutycycle > 1000)
 			dutycycle = 100;
 			__HAL_TIM_SetCompare(&htim3,TIM_CHANNEL_1,dutycycle);
-//			HAL_Delay(delay);
-//			setTimer6(delay);
-//			delay -= increase;
-//			if (delay <= 0) delay = 10;
+
 }
 
 void Buzzer_Off(){
@@ -132,18 +120,14 @@ int main(void)
 
   status_mode = INIT;
 
-
-
   setClock(0,0,0);
   SCH_Init();
-//  SetLed7SegAllOn();
-  SCH_Add_Task(clock, 0, 10000);
-  SCH_Add_Task(timerRun, 0, 100);
-  SCH_Add_Task(fsm_mode_run, 0 , 100);
-  SCH_Add_Task(fsm_buz_run, 50000, 100);
-  SCH_Add_Task(button_reading, 0, 100);
-  SCH_Add_Task(Led_scaning, 0 , 10);
-//  SCH_Add_Task(fsm_mode_led7seg, 0, 10);
+  SCH_Add_Task(clock, 0, 1000);
+  SCH_Add_Task(timerRun, 0, 10);
+  SCH_Add_Task(fsm_mode_run, 0 , 10);
+  SCH_Add_Task(fsm_buz_run, 50000, 10);
+  SCH_Add_Task(button_reading, 0, 10);
+  SCH_Add_Task(Led_scaning, 0 , 1);
 
 
   setTimer0(1000);
@@ -154,8 +138,6 @@ int main(void)
   setTimer5(1000);
   setTimer6(1000);
 
-
-//  int count = 0;
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -165,19 +147,6 @@ int main(void)
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
-
-
-//	  if (timer0_flag == 1){
-//	  printf("Current: %d\r\n", count++);
-//		  setTimer0(5000);
-//	  }
-//	  if (timer1_flag == 1){
-//		  Led_scaning();
-//		  setTimer1(10);
-//	  }
-
-
-//		  Buzzer_On();
 
 	  SCH_Dispatch_Tasks();
   }

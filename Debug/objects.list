@@ -2,7 +2,6 @@
 "./Core/Src/clock.o"
 "./Core/Src/fsm_buz.o"
 "./Core/Src/fsm_mode.o"
-"./Core/Src/fsm_mode_Led7Seg.o"
 "./Core/Src/global.o"
 "./Core/Src/input_reading.o"
 "./Core/Src/led_display.o"

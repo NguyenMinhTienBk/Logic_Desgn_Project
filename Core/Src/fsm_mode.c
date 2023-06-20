@@ -12,13 +12,12 @@ void fsm_mode_run(){
 	case INIT:
 		status_mode = MODE1;
 		status_buz = BUZ_OFF;
-//		status_led7seg = INIT;
-//		index_led = 0;
 		//setTimer1(500);
 		break;
 
 	case MODE1:
 		updateLedBuffer(minute , second);
+//		updateLedBuffer(hour , minute);
 		if (isButtonflag(butM) == 1){
 //			clearTimer1();
 //			clearTimer2();

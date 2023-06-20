@@ -28,8 +28,8 @@ Core/Src/main.o: ../Core/Src/main.c ../Core/Inc/fsm_buz.h \
  ../Core/Inc/software_timer.h ../Core/Inc/button.h \
  ../Core/Inc/led_display.h ../Core/Inc/main.h ../Core/Inc/button.h \
  ../Core/Inc/fsm_mode.h ../Core/Inc/software_timer.h \
- ../Core/Inc/input_reading.h ../Core/Inc/fsm_mode_Led7Seg.h \
- ../Core/Inc/led_display.h ../Core/Inc/scheduler.h ../Core/Inc/clock.h
+ ../Core/Inc/input_reading.h ../Core/Inc/led_display.h \
+ ../Core/Inc/scheduler.h ../Core/Inc/clock.h
 ../Core/Inc/fsm_buz.h:
 ../Core/Inc/global.h:
 ../Core/Inc/main.h:
@@ -66,7 +66,6 @@ Core/Src/main.o: ../Core/Src/main.c ../Core/Inc/fsm_buz.h \
 ../Core/Inc/fsm_mode.h:
 ../Core/Inc/software_timer.h:
 ../Core/Inc/input_reading.h:
-../Core/Inc/fsm_mode_Led7Seg.h:
 ../Core/Inc/led_display.h:
 ../Core/Inc/scheduler.h:
 ../Core/Inc/clock.h:
